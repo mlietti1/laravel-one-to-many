@@ -7,9 +7,9 @@
 @endsection
 
 @section('content')
-<div class="container py-4">
+<div class="container py-3">
 
-    <h1>My projects</h1>
+    <h1 class="my-3">My projects</h1>
 
     @if (session('deleted'))
         <div class="alert alert-success" role="alert">
