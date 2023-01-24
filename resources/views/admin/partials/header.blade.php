@@ -32,6 +32,15 @@
                 </li>
                 @endif
                 @else
+
+                <li>
+                    <form class="d-flex align-items-center me-2" action="{{route('admin.projects.index')}}" method="GET">
+                        @csrf
+                        <input class="form-control d-inline-block me-2" name="search" type="text" placeholder="Search title">
+                        <button class="btn btn-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link protected</a>
                 </li>
