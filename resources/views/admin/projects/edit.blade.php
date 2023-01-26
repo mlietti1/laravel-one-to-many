@@ -83,7 +83,11 @@
 
     <div class="my-3">
         <span class="text-danger me-1">Delete Project:</span>
-        @include('admin.partials.form-delete')
+        @include('admin.partials.form-delete',[
+                            'route' => 'projects',
+                            'message' => "Are you sure you want to delete the project:$project->name?",
+                            'entity' => $project
+                        ])
     </div>
 
 

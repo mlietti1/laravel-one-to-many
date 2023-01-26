@@ -16,7 +16,7 @@
     @endif
 
     <div class="w-50">
-        <form  action="{{route('admin.projects.store')}}" method="POST">
+        <form  action="{{route('admin.types.store')}}" method="POST">
             @csrf
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="name" placeholder="New type">
@@ -35,7 +35,7 @@
             @foreach ($types as $type)
                 <tr>
                     <td class="d-flex">
-                        <form action="{{route('admin.projects.update', $project)}}" method="POST">
+                        <form action="{{route('admin.types.update', $type)}}" method="POST">
                             @csrf
                             @method('PATCH')
                             <input class="border-0" type="text" name="name" value="{{$project->name}}">
