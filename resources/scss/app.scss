@@ -14,14 +14,16 @@ table{
     }
 }
 
-.aside-nav ul{
-    list-style: none;
-    li{
-        a{
-            color: white;
-            text-decoration: none;
-            &:hover{
-                text-decoration: underline;
+.aside-nav{
+    ul{
+        list-style: none;
+        li{
+            a{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }

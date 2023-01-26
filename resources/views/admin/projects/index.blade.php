@@ -38,7 +38,11 @@
                     <a class="btn btn-primary" href="{{route('admin.projects.show', $project)}}" title="show"><i class="fa-regular fa-eye"></i></a>
                     <a class="btn btn-warning " href="{{route('admin.projects.edit', $project)}}" title="edit"><i class="fa-solid fa-pencil"></i></a>
                     {{-- qui partial delete --}}
-                    @include('admin.partials.form-delete')
+                    @include('admin.partials.form-delete',[
+                            'route' => 'projects',
+                            'message' => "Are you sure you want to delete the project:$project->name?",
+                            'entity' => $project
+                        ])
                 </td>
             </tr>
             @empty

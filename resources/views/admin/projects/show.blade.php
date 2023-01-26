@@ -18,6 +18,12 @@
 
     <h1 class="my-3"> {{$project->name}} <a class="btn btn-warning " href="{{route('admin.projects.edit', $project)}}">EDIT</a> </h1>
 
+    @if($project->type)
+    <span class="mb-3 badge text-bg-info">{{$project->type?->name}}</span>
+    <div class="mb-3"><a  href="{{route('admin.types_project')}}">Go to the list of types</a>
+    </div>
+    @endif
+
     <div><p><strong>Client:</strong> {{$project->client_name}}</p></div>
 
     @if($project->cover_image)
